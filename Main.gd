@@ -16,6 +16,7 @@ func new_game():
 	$player.start($StartPosition.position)
 	$StartTimer.start()
 	$HUD.show_message("Get Ready")
+	get_tree().call_group("mobs", "queue_free")
 
 
 func _on_MobTimer_timeout():
